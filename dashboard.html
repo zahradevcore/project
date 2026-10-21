@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Admin Panel Dashboard">
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="admin-panel">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 19V9.5L12 4l8 5.5V19a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1Z"></path>
+                    </svg>
+                </div>
+                <span>Admin Panel</span>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Main navigation">
+                <a href="#" class="nav-link active">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M16 20v-1.5a4.5 4.5 0 0 0-4.5-4.5h-3A4.5 4.5 0 0 0 4 18.5V20"></path>
+                        <circle cx="10" cy="7" r="3"></circle>
+                        <path d="M16 4.5a3 3 0 0 1 0 5.8"></path>
+                        <path d="M18 14.5a4.5 4.5 0 0 1 2 4V20"></path>
+                    </svg>
+                    <span>Users</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 7h14l1 13H4L5 7Z"></path>
+                        <path d="M8 7a4 4 0 0 1 8 0"></path>
+                    </svg>
+                    <span>Products</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 5h16v14H4z"></path>
+                        <path d="M8 9h8M8 13h5"></path>
+                    </svg>
+                    <span>Orders</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 6h16v12H4z"></path>
+                        <path d="m4 7 8 6 8-6"></path>
+                    </svg>
+                    <span>Messages</span>
+                    <span class="nav-badge">4</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.4 1.4-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V20h-2v-.4a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L9 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H7v-2h.8a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L9 9l1.4-1.4.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6V6h2v.4a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L20 9l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.8v2h-.8a1.7 1.7 0 0 0-1.6 1Z"></path>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-help">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-.9.8-1.7 1.2-1.7 2.7"></path>
+                        <path d="M12 17h.01"></path>
+                    </svg>
+                    <span>Need Help?</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="mobile-menu-button" type="button" aria-label="Open navigation">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+
+                    <div>
+                        <p class="header-greeting">Welcome back</p>
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <form class="search-box">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="11" cy="11" r="6"></circle>
+                            <path d="m16 16 4 4"></path>
+                        </svg>
+                        <input type="search" placeholder="Search..." aria-label="Search">
+                    </form>
+
+                    <button class="header-icon-button notification-button" type="button" aria-label="Notifications">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+                            <path d="M10 21h4"></path>
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="admin-profile">
+                        <div class="admin-avatar">AM</div>
+                        <div class="admin-info">
+                            <strong>Alex Morgan</strong>
+                            <span>Administrator</span>
+                        </div>
+                        <svg class="profile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m7 10 5 5 5-5"></path>
+                        </svg>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+
+                <!-- Statistics -->
+                <section class="statistics-section" aria-labelledby="statistics-title">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-label">Overview</p>
+                            <h2 id="statistics-title">Today's Statistics</h2>
+                        </div>
+                        <span class="date-label">September 26, 2026</span>
+                    </div>
+
+                    <div class="statistics-grid">
+
+                        <article class="stat-card">
+                            <div class="stat-card-top">
+                                <div class="stat-icon users-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M16 20v-1.5a4.5 4.5 0 0 0-4.5-4.5h-3A4.5 4.5 0 0 0 4 18.5V20"></path>
+                                        <circle cx="10" cy="7" r="3"></circle>
+                                        <path d="M16 4.5a3 3 0 0 1 0 5.8"></path>
+                                        <path d="M18 14.5a4.5 4.5 0 0 1 2 4V20"></path>
+                                    </svg>
+                                </div>
+                                <span class="stat-change positive">+12.5%</span>
+                            </div>
+                            <div class="stat-card-content">
+                                <p>Total Users</p>
+                                <h3>12,480</h3>
+                                <span>Compared to last month</span>
+                            </div>
+                        </article>
+
+                        <article class="stat-card">
+                            <div class="stat-card-top">
+                                <div class="stat-icon orders-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M4 5h16v14H4z"></path>
+                                        <path d="M8 9h8M8 13h5"></path>
+                                    </svg>
+                                </div>
+                                <span class="stat-change positive">+8.2%</span>
+                            </div>
+                            <div class="stat-card-content">
+                                <p>Total Orders</p>
+                                <h3>3,842</h3>
+                                <span>Compared to last month</span>
+                            </div>
+                        </article>
+
+                        <article class="stat-card">
+                            <div class="stat-card-top">
+                                <div class="stat-icon revenue-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12 3v18"></path>
+                                        <path d="M16 7.5c0-1.7-1.8-3-4-3s-4 1.3-4 3 1.8 3 4 3 4 1.3 4 3-1.8 3-4 3-4-1.3-4-3"></path>
+                                    </svg>
+                                </div>
+                                <span class="stat-change positive">+15.8%</span>
+                            </div>
+                            <div class="stat-card-content">
+                                <p>Total Revenue</p>
+                                <h3>$48,620</h3>
+                                <span>Compared to last month</span>
+                            </div>
+                        </article>
+
+                        <article class="stat-card">
+                            <div class="stat-card-top">
+                                <div class="stat-icon products-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"></path>
+                                        <path d="m4.5 7.5 7.5 4 7.5-4M12 12v9"></path>
+                                    </svg>
+                                </div>
+                                <span class="stat-change negative">-3.4%</span>
+                            </div>
+                            <div class="stat-card-content">
+                                <p>Total Products</p>
+                                <h3>1,256</h3>
+                                <span>Compared to last month</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <!-- Dashboard Lists -->
+                <div class="dashboard-sections">
+
+                    <!-- Recent Users -->
+                    <section class="dashboard-section recent-users-section" aria-labelledby="recent-users-title">
+                        <div class="section-heading">
+                            <div>
+                                <p class="section-label">Customers</p>
+                                <h2 id="recent-users-title">Recent Users</h2>
+                            </div>
+                            <a href="#" class="view-all-link">View All</a>
+                        </div>
+
+                        <div class="user-list">
+
+                            <article class="user-card">
+                                <div class="user-avatar avatar-orange">EM</div>
+                                <div class="user-info">
+                                    <h3>Emma Miller</h3>
+                                    <p>emma.miller@example.com</p>
+                                </div>
+                                <span class="status-label active-status">Active</span>
+                                <div class="user-actions">
+                                    <button type="button" class="action-button" aria-label="View Emma Miller">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path>
+                                            <circle cx="12" cy="12" r="2.5"></circle>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="action-button" aria-label="Edit Emma Miller">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m4 16-.7 4.7L8 20l10.8-10.8-4-4L4 16Z"></path>
+                                            <path d="m13.5 6.5 4 4"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+
+                            <article class="user-card">
+                                <div class="user-avatar avatar-green">JW</div>
+                                <div class="user-info">
+                                    <h3>James Wilson</h3>
+                                    <p>james.wilson@example.com</p>
+                                </div>
+                                <span class="status-label pending-status">Pending</span>
+                                <div class="user-actions">
+                                    <button type="button" class="action-button" aria-label="View James Wilson">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-9.5-6Z"></path>
+                                            <circle cx="12" cy="12" r="2.5"></circle>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="action-button" aria-label="Edit James Wilson">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m4 16-.7 4.7L8 20l10.8-10.8-4-4L4 16Z"></path>
+                                            <path d="m13.5 6.5 4 4"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+
+                            <article class="user-card">
+                                <div class="user-avatar avatar-brown">SD</div>
+                                <div class="user-info">
+                                    <h3>Sophia Davis</h3>
+                                    <p>sophia.davis@example.com</p>
+                                </div>
+                                <span class="status-label inactive-status">Inactive</span>
+                                <div class="user-actions">
+                                    <button type="button" class="action-button" aria-label="View Sophia Davis">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path>
+                                            <circle cx="12" cy="12" r="2.5"></circle>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="action-button" aria-label="Edit Sophia Davis">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m4 16-.7 4.7L8 20l10.8-10.8-4-4L4 16Z"></path>
+                                            <path d="m13.5 6.5 4 4"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+
+                            <article class="user-card">
+                                <div class="user-avatar avatar-terracotta">OB</div>
+                                <div class="user-info">
+                                    <h3>Oliver Brown</h3>
+                                    <p>oliver.brown@example.com</p>
+                                </div>
+                                <span class="status-label active-status">Active</span>
+                                <div class="user-actions">
+                                    <button type="button" class="action-button" aria-label="View Oliver Brown">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path>
+                                            <circle cx="12" cy="12" r="2.5"></circle>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="action-button" aria-label="Edit Oliver Brown">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m4 16-.7 4.7L8 20l10.8-10.8-4-4L4 16Z"></path>
+                                            <path d="m13.5 6.5 4 4"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+
+                        </div>
+                    </section>
+
+                    <!-- Recent Orders -->
+                    <section class="dashboard-section recent-orders-section" aria-labelledby="recent-orders-title">
+                        <div class="section-heading">
+                            <div>
+                                <p class="section-label">Sales</p>
+                                <h2 id="recent-orders-title">Recent Orders</h2>
+                            </div>
+                            <a href="#" class="view-all-link">View All</a>
+                        </div>
+
+                        <div class="order-list">
+
+                            <article class="order-card">
+                                <div class="order-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M5 7h14l1 13H4L5 7Z"></path>
+                                        <path d="M8 7a4 4 0 0 1 8 0"></path>
+                                    </svg>
+                                </div>
+                                <div class="order-info">
+                                    <span class="order-id">#ORD-2841</span>
+                                    <h3>Leather Backpack</h3>
+                                    <p>Emma Miller</p>
+                                </div>
+                                <div class="order-price">
+                                    <span>Price</span>
+                                    <strong>$129.00</strong>
+                                </div>
+                                <span class="order-status completed-status">Completed</span>
+                                <button type="button" class="order-action-button" aria-label="View order ORD-2841">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m9 18 6-6-6-6"></path>
+                                    </svg>
+                                </button>
+                            </article>
+
+                            <article class="order-card">
+                                <div class="order-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M5 7h14l1 13H4L5 7Z"></path>
+                                        <path d="M8 7a4 4 0 0 1 8 0"></path>
+                                    </svg>
+                                </div>
+                                <div class="order-info">
+                                    <span class="order-id">#ORD-2840</span>
+                                    <h3>Classic Wristwatch</h3>
+                                    <p>James Wilson</p>
+                                </div>
+                                <div class="order-price">
+                                    <span>Price</span>
+                                    <strong>$245.00</strong>
+                                </div>
+                                <span class="order-status processing-status">Processing</span>
+                                <button type="button" class="order-action-button" aria-label="View order ORD-2840">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m9 18 6-6-6-6"></path>
+                                    </svg>
+                                </button>
+                            </article>
+
+                            <article class="order-card">
+                                <div class="order-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M5 7h14l1 13H4L5 7Z"></path>
+                                        <path d="M8 7a4 4 0 0 1 8 0"></path>
+                                    </svg>
+                                </div>
+                                <div class="order-info">
+                                    <span class="order-id">#ORD-2839</span>
+                                    <h3>Ceramic Coffee Set</h3>
+                                    <p>Sophia Davis</p>
+                                </div>
+                                <div class="order-price">
+                                    <span>Price</span>
+                                    <strong>$86.50</strong>
+                                </div>
+                                <span class="order-status shipped-status">Shipped</span>
+                                <button type="button" class="order-action-button" aria-label="View order ORD-2839">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m9 18 6-6-6-6"></path>
+                                    </svg>
+                                </button>
+                            </article>
+
+                            <article class="order-card">
+                                <div class="order-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M5 7h14l1 13H4L5 7Z"></path>
+                                        <path d="M8 7a4 4 0 0 1 8 0"></path>
+                                    </svg>
+                                </div>
+                                <div class="order-info">
+                                    <span class="order-id">#ORD-2838</span>
+                                    <h3>Canvas Sneakers</h3>
+                                    <p>Oliver Brown</p>
+                                </div>
+                                <div class="order-price">
+                                    <span>Price</span>
+                                    <strong>$74.00</strong>
+                                </div>
+                                <span class="order-status pending-order-status">Pending</span>
+                                <button type="button" class="order-action-button" aria-label="View order ORD-2838">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m9 18 6-6-6-6"></path>
+                                    </svg>
+                                </button>
+                            </article>
+
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

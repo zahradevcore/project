@@ -1,0 +1,1342 @@
+
+/* ---------- CSS Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- CSS Variables ---------- */
+
+:root {
+    --burnt-orange: #c76532;
+    --terracotta: #b85c45;
+    --dark-brown: #4a3328;
+    --brown: #76503d;
+    --dark-green: #30483b;
+
+    --cream: #fbf7f0;
+    --beige: #eee4d5;
+    --light-beige: #f5eee4;
+    --white: #ffffff;
+
+    --text-dark: #2f2925;
+    --text-medium: #756a62;
+    --text-light: #9b9088;
+
+    --sidebar-width: 250px;
+    --border-color: #e8ddd0;
+
+    --shadow-soft: 0 8px 24px rgba(74, 51, 40, 0.06);
+    --transition: 0.25s ease;
+}
+
+/* ---------- Global Styles ---------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--cream);
+    line-height: 1.5;
+}
+
+button,
+a,
+input {
+    transition: var(--transition);
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ---------- Main Page Layout ---------- */
+
+.admin-panel {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    width: var(--sidebar-width);
+    height: 100vh;
+    padding: 28px 18px;
+    background-color: var(--dark-green);
+    color: var(--white);
+    overflow-y: auto;
+}
+
+/* ---------- Sidebar Title / Logo ---------- */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px;
+    margin-bottom: 42px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: var(--burnt-orange);
+    color: var(--white);
+}
+
+.brand-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+/* ---------- Sidebar Navigation ---------- */
+
+.sidebar-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+/* ---------- Navigation Links ---------- */
+
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 48px;
+    padding: 0 14px;
+    border-radius: 10px;
+    color: #c8d0c9;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-link svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    color: #aebbb1;
+}
+
+.nav-link span {
+    white-space: nowrap;
+}
+
+/* ---------- Active Navigation Item ---------- */
+
+.nav-link.active {
+    background-color: var(--burnt-orange);
+    color: var(--white);
+    box-shadow: 0 5px 14px rgba(199, 101, 50, 0.18);
+}
+
+.nav-link.active svg {
+    color: var(--white);
+}
+
+/* ---------- Sidebar Hover Effects ---------- */
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+}
+
+.nav-link:hover svg {
+    color: var(--white);
+}
+
+.nav-link.active:hover {
+    background-color: var(--terracotta);
+}
+
+/* ---------- Sidebar Footer ---------- */
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 18px 12px 4px;
+    color: #aebbb1;
+}
+
+.sidebar-footer p {
+    margin-bottom: 4px;
+    color: #dce2dc;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sidebar-footer span {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* ---------- Main Content Area ---------- */
+
+.main-content {
+    width: calc(100% - var(--sidebar-width));
+    min-width: 0;
+    min-height: 100vh;
+    margin-left: var(--sidebar-width);
+    padding: 32px 36px 40px;
+}
+
+
+/* ---------- Header ---------- */
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 34px;
+}
+
+.header-left {
+    min-width: 0;
+}
+
+
+/* ---------- Dashboard Title ---------- */
+
+.dashboard-heading .eyebrow {
+    margin-bottom: 4px;
+    color: var(--burnt-orange);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.dashboard-heading h1 {
+    color: var(--dark-brown);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+}
+
+
+/* ---------- Header Right Area ---------- */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    min-width: 0;
+}
+
+
+/* ---------- Search Box ---------- */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 220px;
+    height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+    background-color: var(--white);
+    color: var(--text-light);
+}
+
+.search-box svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.search-box input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text-dark);
+    font-size: 13px;
+}
+
+.search-box input::placeholder {
+    color: var(--text-light);
+}
+
+.search-box:focus-within {
+    border-color: var(--burnt-orange);
+    box-shadow: 0 0 0 3px rgba(199, 101, 50, 0.08);
+}
+
+/* ---------- Header Buttons / Icons ---------- */
+
+.header-icon-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+    background-color: var(--white);
+    color: var(--brown);
+}
+
+.header-icon-button svg {
+    width: 19px;
+    height: 19px;
+}
+
+.header-icon-button:hover {
+    border-color: var(--burnt-orange);
+    color: var(--burnt-orange);
+    background-color: var(--light-beige);
+}
+
+.notification-dot {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 6px;
+    height: 6px;
+    border: 1.5px solid var(--white);
+    border-radius: 50%;
+    background-color: var(--burnt-orange);
+}
+
+
+/* ---------- Admin Profile ---------- */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    padding-left: 4px;
+}
+
+.admin-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--terracotta);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.admin-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.admin-details strong {
+    overflow: hidden;
+    color: var(--dark-brown);
+    font-size: 13px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.admin-details span {
+    margin-top: 2px;
+    color: var(--text-light);
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.profile-arrow {
+    width: 15px;
+    height: 15px;
+    margin-left: 3px;
+    color: var(--text-light);
+}
+
+.admin-profile:hover .profile-arrow {
+    color: var(--burnt-orange);
+}
+
+/* ---------- Statistics Section ---------- */
+
+.statistics-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+
+/* ---------- Statistic Cards ---------- */
+
+.stat-card {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.stat-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+
+/* ---------- Statistic Card Icons ---------- */
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.stat-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.stat-icon.orange {
+    background-color: #f8e3d5;
+    color: var(--burnt-orange);
+}
+
+.stat-icon.terracotta {
+    background-color: #f3ddd6;
+    color: var(--terracotta);
+}
+
+.stat-icon.green {
+    background-color: #dfe9e1;
+    color: var(--dark-green);
+}
+
+.stat-icon.brown {
+    background-color: #eadfd8;
+    color: var(--brown);
+}
+
+
+/* ---------- Statistic Card Change ---------- */
+
+.stat-change {
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.stat-change.positive {
+    background-color: #e5eee7;
+    color: var(--dark-green);
+}
+
+
+/* ---------- Card Titles ---------- */
+
+.stat-title {
+    margin-bottom: 5px;
+    color: var(--text-medium);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* ---------- Card Numbers ---------- */
+
+.stat-number {
+    margin-bottom: 5px;
+    color: var(--dark-brown);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+/* ---------- Card Descriptions ---------- */
+
+.stat-description {
+    color: var(--text-light);
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* ---------- Card Hover Effects ---------- */
+
+.stat-card:hover {
+    border-color: #ddcdbd;
+    box-shadow: 0 12px 30px rgba(74, 51, 40, 0.09);
+    transform: translateY(-3px);
+}
+
+
+/* ---------- Recent Users Section ---------- */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.dashboard-section {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.section-eyebrow {
+    margin-bottom: 3px;
+    color: var(--burnt-orange);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+    color: var(--dark-brown);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.view-all-link {
+    color: var(--burnt-orange);
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.view-all-link:hover {
+    color: var(--dark-brown);
+}
+
+
+/* ---------- User List ---------- */
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* ---------- User Cards ---------- */
+
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: var(--light-beige);
+    transition: transform var(--transition), border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
+}
+
+
+/* ---------- User Avatar ---------- */
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.avatar-orange {
+    background-color: #f3d5c2;
+    color: #a84f27;
+}
+
+.avatar-green {
+    background-color: #d9e5dc;
+    color: var(--dark-green);
+}
+
+.avatar-brown {
+    background-color: #e4d8d0;
+    color: var(--brown);
+}
+
+.avatar-terracotta {
+    background-color: #efd5ce;
+    color: #a64d38;
+}
+
+
+/* ---------- User Information ---------- */
+
+.user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.user-info h3 {
+    overflow: hidden;
+    margin-bottom: 2px;
+    color: var(--dark-brown);
+    font-size: 12px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-info p {
+    overflow: hidden;
+    color: var(--text-light);
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ---------- User Status ---------- */
+
+.user-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 60px;
+    padding: 5px 8px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.active-status {
+    background-color: #e2eee5;
+    color: #3e684c;
+}
+
+.pending-status {
+    background-color: #f5e8d4;
+    color: #96652f;
+}
+
+.inactive-status {
+    background-color: #ebe7e3;
+    color: #766c65;
+}
+
+
+/* ---------- User Action Buttons ---------- */
+
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background-color: transparent;
+    color: var(--text-light);
+}
+
+.action-button svg {
+    width: 17px;
+    height: 17px;
+}
+
+.action-button:hover {
+    background-color: var(--white);
+    color: var(--burnt-orange);
+}
+
+
+/* ---------- User Card Hover Effects ---------- */
+
+.user-card:hover {
+    border-color: var(--border-color);
+    background-color: var(--white);
+    box-shadow: 0 5px 16px rgba(74, 51, 40, 0.06);
+    transform: translateY(-1px);
+}
+
+
+/* ---------- Recent Orders Section ---------- */
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* ---------- Order Cards ---------- */
+
+.order-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: var(--light-beige);
+    transition: transform var(--transition), border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
+}
+
+.order-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1;
+}
+
+
+/* ---------- Order Icon ---------- */
+
+.order-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background-color: #eadfd6;
+    color: var(--terracotta);
+}
+
+.order-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* ---------- Order Information ---------- */
+
+.order-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.order-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.order-info h3 {
+    overflow: hidden;
+    color: var(--dark-brown);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.order-id {
+    margin-top: 2px;
+    color: var(--text-light);
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.order-customer {
+    margin-top: 1px;
+    color: var(--text-medium);
+    font-size: 10px;
+}
+
+
+/* ---------- Order Status ---------- */
+
+.order-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 4px 7px;
+    border-radius: 20px;
+    font-size: 8px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.delivered-status {
+    background-color: #e2eee5;
+    color: #3e684c;
+}
+
+.processing-status {
+    background-color: #f3e6d2;
+    color: #96652f;
+}
+
+.shipped-status {
+    background-color: #e2e8e8;
+    color: #47605f;
+}
+
+.pending-order-status {
+    background-color: #f3ddd6;
+    color: #a44f39;
+}
+
+
+/* ---------- Order Price and Meta ---------- */
+
+.order-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.order-meta strong {
+    color: var(--dark-brown);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* ---------- Order Action Buttons ---------- */
+
+.order-action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    background-color: var(--white);
+    color: var(--text-light);
+}
+
+.order-action-button svg {
+    width: 15px;
+    height: 15px;
+}
+
+.order-action-button:hover {
+    border-color: var(--burnt-orange);
+    background-color: var(--burnt-orange);
+    color: var(--white);
+}
+
+
+/* ---------- Order Card Hover Effects ---------- */
+
+.order-card:hover {
+    border-color: var(--border-color);
+    background-color: var(--white);
+    box-shadow: 0 5px 16px rgba(74, 51, 40, 0.06);
+    transform: translateY(-1px);
+}
+
+
+/* ---------- Tablet Layout ---------- */
+
+@media (max-width: 1100px) {
+    :root {
+        --sidebar-width: 220px;
+    }
+
+    .main-content {
+        padding: 28px 24px 36px;
+    }
+
+    .statistics-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-right {
+        gap: 12px;
+    }
+
+    .search-box {
+        width: 190px;
+    }
+
+    .admin-details {
+        display: none;
+    }
+}
+
+
+/* ---------- Small Tablet Layout ---------- */
+
+@media (max-width: 800px) {
+    :root {
+        --sidebar-width: 190px;
+    }
+
+    .sidebar {
+        padding: 24px 12px;
+    }
+
+    .sidebar-brand {
+        padding: 0 8px;
+        font-size: 17px;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .nav-link {
+        gap: 10px;
+        padding: 0 11px;
+        font-size: 13px;
+    }
+
+    .main-content {
+        padding: 24px 18px 32px;
+    }
+
+    .main-header {
+        align-items: flex-start;
+    }
+
+    .header-right {
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        width: 180px;
+    }
+
+    .statistics-section {
+        gap: 14px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .dashboard-section {
+        padding: 20px;
+    }
+}
+
+
+/* ---------- Mobile Layout ---------- */
+
+@media (max-width: 640px) {
+    .admin-panel {
+        display: block;
+    }
+
+    /* ---------- Responsive Sidebar ---------- */
+
+    .sidebar {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 16px;
+        overflow: visible;
+    }
+
+    .sidebar-brand {
+        margin-bottom: 18px;
+        padding: 0 4px;
+    }
+
+    .sidebar-navigation {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+
+    .nav-link {
+        justify-content: center;
+        gap: 6px;
+        min-height: 42px;
+        padding: 0 6px;
+        font-size: 11px;
+    }
+
+    .nav-link svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+
+    /* ---------- Responsive Main Content ---------- */
+
+    .main-content {
+        width: 100%;
+        min-height: auto;
+        margin-left: 0;
+        padding: 22px 14px 30px;
+    }
+
+
+    /* ---------- Responsive Header ---------- */
+
+    .main-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        margin-bottom: 24px;
+    }
+
+    .dashboard-heading h1 {
+        font-size: 25px;
+    }
+
+    .header-right {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .search-box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .header-icon-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .admin-profile {
+        padding-left: 0;
+    }
+
+    .admin-details {
+        display: none;
+    }
+
+    .profile-arrow {
+        display: none;
+    }
+
+
+    /* ---------- Responsive Statistics ---------- */
+
+    .statistics-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .stat-number {
+        font-size: 23px;
+    }
+
+
+    /* ---------- Responsive Dashboard Sections ---------- */
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .dashboard-section {
+        padding: 18px;
+    }
+
+    .section-header {
+        margin-bottom: 16px;
+    }
+
+
+    /* ---------- Responsive User Cards ---------- */
+
+    .user-card {
+        gap: 9px;
+        padding: 10px;
+    }
+
+    .user-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .user-info h3 {
+        font-size: 11px;
+    }
+
+    .user-info p {
+        font-size: 9px;
+    }
+
+    .user-status {
+        min-width: 54px;
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+
+    .action-button {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    /* ---------- Responsive Order Cards ---------- */
+
+    .order-card {
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .order-main {
+        gap: 9px;
+    }
+
+    .order-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .order-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .order-info h3 {
+        font-size: 11px;
+    }
+
+    .order-id,
+    .order-customer {
+        font-size: 9px;
+    }
+
+    .order-meta {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+    }
+
+    .order-meta strong {
+        font-size: 11px;
+    }
+
+    .order-action-button {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+/* ---------- Very Small Mobile Devices ---------- */
+
+@media (max-width: 420px) {
+    .sidebar-navigation {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-link {
+        justify-content: flex-start;
+        padding: 0 12px;
+    }
+
+    .header-right {
+        grid-template-columns: 1fr auto;
+    }
+
+    .admin-profile {
+        grid-column: 1 / -1;
+        justify-content: flex-end;
+    }
+
+    .admin-details {
+        display: flex;
+    }
+
+    .profile-arrow {
+        display: block;
+    }
+
+    .dashboard-section {
+        padding: 15px;
+    }
+
+    .section-header h2 {
+        font-size: 16px;
+    }
+
+    .user-status {
+        display: none;
+    }
+
+    .user-card {
+        padding: 9px;
+    }
+
+    .order-card {
+        gap: 8px;
+    }
+
+    .order-meta strong {
+        font-size: 10px;
+    }
+}
+
+
+/* ---------- Final Overflow Fixes ---------- */
+
+.main-content,
+.dashboard-grid,
+.statistics-section,
+.dashboard-section,
+.user-list,
+.order-list,
+.user-card,
+.order-card,
+.user-info,
+.order-info {
+    min-width: 0;
+}
+
+.user-info,
+.order-info {
+    overflow: hidden;
+}
+
+.search-box input {
+    min-width: 0;
+}
+
+.order-title-row,
+.header-right {
+    min-width: 0;
+}
+
+@media (max-width: 360px) {
+    .main-content {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .header-right {
+        gap: 6px;
+    }
+
+    .search-box {
+        padding: 0 10px;
+    }
+
+    .dashboard-heading h1 {
+        font-size: 22px;
+    }
+}
