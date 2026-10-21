@@ -1340,3 +1340,146 @@ svg {
         font-size: 22px;
     }
 }
+/* ===== Login Page ===== */
+
+.login-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background-color: #f5efe6;
+}
+
+.login-page .login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-page .login-card {
+    width: 100%;
+
+    max-width: 400px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(70, 45, 30, 0.12);
+    box-sizing: border-box;
+
+}
+
+.login-page .login-card h1 {
+    margin: 0 0 10px;
+    color: #493528;
+    text-align: center;
+    font-size: 28px;
+}
+
+.login-page .login-subtitle {
+    margin-bottom: 30px;
+    color: #8a7b70;
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-page .login-input-group {
+
+    margin-bottom: 20px;
+}
+
+.login-page .login-input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #493528;
+
+    font-size: 14px;
+}
+
+.login-page .login-input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ded3c7;
+    border-radius: 8px;
+
+    outline: none;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.login-page .login-input-group input:focus {
+    border-color: 
+
+#b86f45;
+}
+
+.login-page .login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 25px;
+    font-size: 12px;
+}
+
+.login-page .remember-me {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+    color: #66564b;
+}
+
+.login-page .forgot-password {
+    color: #a85d35;
+    text-decoration: none;
+}
+
+
+.login-page .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-page .login-button {
+    width: 100%;
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+    background-color: #a85d35;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 
+
+0.3s;
+}
+
+.login-page .login-button:hover {
+    background-color: #824326;
+}
+
+.login-page .login-footer {
+
+    margin-top: 25px;
+    color: #8a7b70;
+    text-align: center;
+    font-size: 13px;
+}
+
+.login-page .login-footer a {
+    color: #a85d35;
+    text-decoration: 
+
+none;
+    font-weight: bold;
+}
+
+.login-page .login-footer a:hover {
+    text-decoration: underline;
+}
